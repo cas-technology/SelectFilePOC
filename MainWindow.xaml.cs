@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +25,15 @@ namespace SelectFilePOC
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void btnSelectFile_Click(object sender, RoutedEventArgs e)
+        {
+            var selectFileDialog = new OpenFileDialog();
+            if (selectFileDialog.ShowDialog() == true)
+            {
+                textBlock.Text = File.ReadAllText(selectFileDialog.FileName);
+            }
         }
     }
 }

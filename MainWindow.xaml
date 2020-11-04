@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SelectFilePOC"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Select a file - This is a proof of concept!" Height="450" Width="450">
     <Grid>
-        
+        <TextBox Name="textBlock" Margin="0,0,0,47" />
+        <Button Name="btnSelectFile" Click="btnSelectFile_Click" Margin="235,372,10,10" >Select file</Button>
     </Grid>
 </Window>
